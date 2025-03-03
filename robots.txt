@@ -1,7 +1,7 @@
 # robots.txt for https://egconvert.com/
 
 User-agent: *
-Disallow: /asset/
-Allow: /conv/
+# Disallow: /asset/
+# Allow: /conv/
 
 Sitemap: https://egconvert.com/sitemap.xml
