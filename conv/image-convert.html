@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+    <!--  -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EG Convert - Free Online Image Converter</title>
+    <meta name="title" content="EG Convert - Free Online Image Converter">
+    <meta name="description"
+        content="Free online image converter. Easily convert images between JPG, PNG, GIF, and more formats with high quality and fast processing. No downloads required.">
+
+
+    <meta name="keywords"
+        content="image converter, JPG converter, JPG to PNG, PNG to JPG, PNG to GIF, image to GIF, convert image online, free image converter, online photo converter, photo format converter, JPG to WebP, WebP to JPG, transparent PNG converter, image format conversion">
+
+    <meta name="robots" content="index,follow">
+    <meta name="copyright" content="eg convert">
+    <meta name="owner" content="Akshay Kumar">
+    <meta name="author" content="eg convert">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://egconvert.com/">
+    <meta property="og:title" content="Unicode to Krutidev (Hindi) Font Converter">
+    <meta property="og:description"
+        content="Convert Your Text From Unicode to Krutidev Online. Share Your Text via Whatsapp, or download converted files">
+    <meta property="og:image" content="asset/img/logo.jpg">
+
+    <link href="https://egconvert.com/" rel="canonical">
+    <link rel="shortcut icon" href="asset/img/logo.jpg">
+
+    <script type="application/ld+json">
+	{
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "EG Convert",
+	"url": "https://egconvert.com",
+	"logo": "https://egconvert.com/asset/img/logo.jpg"
+	}
+	</script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQCLGVL0FQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YQCLGVL0FQ');
+    </script>
+
+    <!-- 	Google adsense -->
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1844164637823321"
+        crossorigin="anonymous"></script>
+
+    <!--  -->
+
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+        * {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+        }
+
+        :root {
+            --primary-color: #3385ff;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6633;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 40px;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* max-width: 1000px;
+            margin: 0 auto; */
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: #555;
+            font-weight: 500;
+        }
+
+        .container-main {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .upload-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .upload-area {
+            border: 2px dashed #dce6f4;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fafcff;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin: 20px 0;
+            position: relative;
+            min-height: 250px;
+        }
+
+        .upload-area:hover,
+        .upload-area.dragover {
+            border-color: var(--primary-color);
+            background-color: #f0f6ff;
+        }
+
+        .upload-placeholder {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 20px;
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: #2a75f0;
+            border-color: #2a75f0;
+        }
+
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* 
+        custom css
+        */
+
+        /* 
+        custom css
+         */
+
+        .preview-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            min-height: 180px;
+        }
+
+        .preview-item {
+            width: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            background: white;
+        }
+
+        .preview-image {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+            /* opacity: 0.5; */
+        }
+
+        .preview-info {
+            padding: 8px;
+            font-size: 0.75rem;
+        }
+
+        .preview-actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 8px;
+            background: #f8f9fa;
+        }
+
+        .action-btn {
+            cursor: pointer;
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .action-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .delete-btn {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            top: 5px;
+            right: 5px;
+        }
+
+        .delete-btn:hover {
+            color: #dc3545;
+        }
+
+        .format-selector {
+            display: flex;
+            justify-content: left;
+            border-radius: 6px;
+        }
+
+        .format-option {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+            font-size: 0.9rem;
+        }
+
+        .format-option.active {
+            border-color: var(--primary-color);
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .features-section {
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .conversion-options {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            margin: 25px 0;
+        }
+
+        .option-title {
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .download-zone {
+            background: #f0f7ff;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .download-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            color: white;
+            font-weight: 600;
+            margin: 5px;
+        }
+
+        .download-btn:hover {
+            background-color: #e55c2d;
+            color: white;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .empty-message {
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            width: 100%;
+        }
+
+        .convert-btn {
+            padding: 12px 35px;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+
+        .upload-stats {
+            text-align: left;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .add-more-container {
+            text-align: left;
+            margin-top: 20px;
+            display: none;
+        }
+
+        /* New styles for left-aligned preview */
+        .preview-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .preview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .preview-title {
+            font-weight: 600;
+            color: #444;
+        }
+
+        .preview-scroll {
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+		<div class="container">
+			<a class="navbar-brand" href="https://egconvert.com">
+				<img src="asset/img/logo.jpg" alt="logo" width="45" height="45">
+				EG Convert</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="https://egconvert.com">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Font Converter
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="https://egconvert.com">Unicode to Krutidev</a>
+							</li>
+							<li><a class="dropdown-item"
+									href="https://egconvert.com/conv/krutidev-to-unicode.html">Krutidev to
+									Unicode</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item"
+									href="https://egconvert.com/conv/mangal-to-krutidev.html">Mangal to
+									Krutidev</a></li>
+							<li><a class="dropdown-item"
+									href="https://egconvert.com/conv/krutidev-to-mangal.html">Krutidev to
+									Mangal</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item"
+									href="https://egconvert.com/conv/unicode-to-chanakya.html">Unicode to
+									Chanakya</a></li>
+							<li><a class="dropdown-item"
+									href="https://egconvert.com/conv/chanakya-to-unicode.html">Chanakya to
+									Unicode</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item"
+									href="https://egconvert.com/conv/krutidev-to-chanakya.html">Krutidev
+									to Chanakya</a></li>
+							<li><a class="dropdown-item"
+									href="https://egconvert.com/conv/chanakya-to-krutidev.html">Chanakya
+									to Krutidev</a></li>
+						</ul>
+					</li>
+          <li class="nav-item">
+						<a class="nav-link" href="https://egconvert.com/conv/image-convert.html">Image converter</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://egconvert.com/page/contact.html">Contact us</a>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+    <div class="container container-main">
+        <!-- Upload Section -->
+        <div class="upload-container">
+            <h2 class="text-center mb-3">Convert Your Images</h2>
+            <p class="text-center text-muted">Convert between PNG, JPG, JPEG, GIF, WEBP, and more</p>
+
+            <div class="format-selector">
+                <div class="format-option active" data-format="jpg">JPG</div>
+                <div class="format-option" data-format="png">PNG</div>
+                <div class="format-option" data-format="webp">WEBP</div>
+                <div class="format-option" data-format="gif">GIF</div>
+                <div class="format-option" data-format="bmp">BMP</div>
+                <div class="format-option" data-format="tiff">TIFF</div>
+            </div>
+
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-placeholder" id="uploadPlaceholder">
+                    <i class="upload-icon fas fa-cloud-upload-alt"></i>
+                    <h4>Drag & Drop Images Here</h4>
+                    <p class="text-muted">or</p>
+                    <label for="fileInput" class="btn btn-primary">
+                        <i class="fas fa-upload me-2"></i>SELECT FILES
+                    </label>
+                    <input type="file" id="fileInput" class="d-none" multiple accept="image/*">
+                </div>
+
+                <div class="preview-wrapper">
+                    <div class="preview-header">
+                        <h5 class="preview-title">Selected Images</h5>
+                        <span class="badge bg-primary rounded-pill" id="fileCount">0</span>
+                    </div>
+                    <div class="preview-scroll">
+                        <div class="preview-container" id="previewContainer">
+                            <!-- Preview items will be added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upload-stats" id="uploadStats">
+                Total size: <span id="totalSize">0 KB</span>
+            </div>
+
+            <div class="add-more-container" id="addMoreContainer">
+                <label for="addMoreInput" class="btn btn-outline-primary">
+                    <i class="fas fa-plus me-2"></i>Add More Images
+                </label>
+                <input type="file" id="addMoreInput" class="d-none" multiple accept="image/*">
+            </div>
+        </div>
+
+        <!-- Conversion Options -->
+        <div class="conversion-options">
+            <h5 class="option-title"><i class="fas fa-cog me-2"></i>Conversion Options</h5>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <!-- <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="compressImages" checked>
+                        <label class="form-check-label" for="compressImages">Compress Images</label>
+                    </div> -->
+                    <!-- <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="preserveMetadata">
+                        <label class="form-check-label" for="preserveMetadata">Preserve Metadata</label>
+                    </div> -->
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="resizeImages">
+                        <label class="form-check-label" for="resizeImages">Resize Images</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Quality Level</label>
+                        <input type="range" class="form-range" id="qualityRange" min="1" max="100" value="85">
+                        <div class="form-text">Higher quality = larger file size</div>
+                    </div>
+                    <div class="mb-3" id="resizeOptions" style="display: none;">
+                        <label class="form-label">Max Width (px)</label>
+                        <input type="number" class="form-control" id="maxWidth" value="1200" min="100" max="4000">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-primary convert-btn" id="convertBtn">
+                    <i class="fas fa-sync-alt me-2"></i>CONVERT NOW
+                </button>
+            </div>
+            <h5 class="download-title">DOWNLOAD</h5>
+            <button class="btn download-btn" id="downloadAllBtn" disabled>
+                <i class="fas fa-arrow-down me-2"></i>DOWNLOAD ALL
+            </button>
+            <button class="btn btn-outline-primary" id="clearAllBtn" disabled>
+                <i class="fas fa-trash me-2"></i>CLEAR
+            </button>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <h4 class="text-center mb-4">Why Choose Our Image Converter?</h4>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h5>Secure Conversion</h5>
+                        <p class="text-muted">All conversions happen locally in your browser. Your images are never
+                            uploaded to any server.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h5>Fast Processing</h5>
+                        <p class="text-muted">Convert images in seconds with our optimized conversion algorithm.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h5>Unlimited Conversions</h5>
+                        <p class="text-muted">Convert as many images as you want without any limitations or watermarks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <style>
+		.footer_link a {
+			text-decoration: none;
+		}
+
+		.contact {
+			list-style: none !important;
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+
+	<div class="bg-dark text-white">
+		<footer class="py-3 my-4">
+			<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+				<li class="nav-item"><a href="https://egconvert.com/" class="nav-link px-2 text-white">Home</a></li>
+				<li class="nav-item"><a href="https://egconvert.com/page/about.html"
+						class="nav-link px-2 text-white">About</a></li>
+				<li class="nav-item"><a href="https://egconvert.com/page/privacy.html"
+						class="nav-link px-2 text-white">Privacy</a></li>
+				<li class="nav-item"><a href="https://egconvert.com/page/contact.html"
+						class="nav-link px-2 text-white">Contact</a></li>
+				<li class="nav-item"><a href="https://egconvert.com/page/disclaimer.html"
+						class="nav-link px-2 text-white">Disclaimer</a></li>
+				<li class="nav-item"><a href="https://egconvert.com/page/terms.html"
+						class="nav-link px-2 text-white">Terms & Conditions</a></li>
+			</ul>
+			<p class="text-center text-white">&copy; 2025 EG Convert</p>
+		</footer>
+	</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Elements
+            const fileInput = document.getElementById('fileInput');
+            const addMoreInput = document.getElementById('addMoreInput');
+            const uploadArea = document.getElementById('uploadArea');
+            const uploadPlaceholder = document.getElementById('uploadPlaceholder');
+            const previewContainer = document.getElementById('previewContainer');
+            const convertBtn = document.getElementById('convertBtn');
+            const downloadAllBtn = document.getElementById('downloadAllBtn');
+            const clearAllBtn = document.getElementById('clearAllBtn');
+            const formatOptions = document.querySelectorAll('.format-option');
+            const fileCountElement = document.getElementById('fileCount');
+            const totalSizeElement = document.getElementById('totalSize');
+            const uploadStats = document.getElementById('uploadStats');
+            const addMoreContainer = document.getElementById('addMoreContainer');
+            const resizeImagesCheckbox = document.getElementById('resizeImages');
+            const resizeOptions = document.getElementById('resizeOptions');
+
+            // Variables
+            let uploadedImages = [];
+            let selectedFormat = 'jpg';
+
+            // Event Listeners
+            fileInput.addEventListener('change', handleFileSelect);
+            addMoreInput.addEventListener('change', handleFileSelect);
+            uploadArea.addEventListener('dragover', handleDragOver);
+            uploadArea.addEventListener('dragleave', handleDragLeave);
+            uploadArea.addEventListener('drop', handleDrop);
+            convertBtn.addEventListener('click', convertImages);
+            downloadAllBtn.addEventListener('click', downloadAllAsZip);
+            clearAllBtn.addEventListener('click', clearAllImages);
+            resizeImagesCheckbox.addEventListener('change', function () {
+                resizeOptions.style.display = this.checked ? 'block' : 'none';
+            });
+
+            // Format selection
+            formatOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    formatOptions.forEach(opt => opt.classList.remove('active'));
+                    option.classList.add('active');
+                    selectedFormat = option.getAttribute('data-format');
+                });
+            });
+
+            // Functions
+            function handleFileSelect(e) {
+                const files = e.target.files;
+                processFiles(files);
+            }
+
+            function handleDragOver(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadArea.classList.add('dragover');
+            }
+
+            function handleDragLeave(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadArea.classList.remove('dragover');
+            }
+
+            function handleDrop(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadArea.classList.remove('dragover');
+
+                const files = e.dataTransfer.files;
+                processFiles(files);
+            }
+
+            function processFiles(files) {
+                if (files.length === 0) return;
+
+                // Hide placeholder when files are added
+                uploadPlaceholder.style.display = 'none';
+                uploadStats.style.display = 'block';
+                addMoreContainer.style.display = 'block';
+
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+
+                    // Check if file is an image
+                    if (!file.type.match('image.*')) {
+                        alert('Please upload only image files.');
+                        continue;
+                    }
+
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        const imageData = {
+                            name: file.name,
+                            type: file.type,
+                            size: file.size,
+                            dataUrl: e.target.result,
+                            converted: false,
+                            convertedDataUrl: null
+                        };
+
+                        uploadedImages.push(imageData);
+                        renderPreview(imageData, uploadedImages.length - 1);
+                        updateUI();
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+            }
+
+            function renderPreview(imageData, index) {
+                const previewItem = document.createElement('div');
+                previewItem.className = 'preview-item';
+
+                // Format file size for display
+                const fileSize = (imageData.size / 1024).toFixed(2);
+
+                previewItem.innerHTML = `
+                    <img src="${imageData.dataUrl}" alt="${imageData.name}" class="preview-image">
+                    <div class="preview-info">
+                        <div class="text-truncate">${imageData.name}</div>
+                        <small class="text-muted">${fileSize} KB</small>
+                    </div>
+                    <div class="preview-actions">
+                        <span class="action-btn download-btn" data-index="${index}">
+                            <i class="fas fa-arrow-down"></i>
+                        </span>
+                        <span class="action-btn delete-btn" data-index="${index}">
+                            <i class="fas fa-xmark"></i>
+                        </span>
+                    </div>
+                `;
+
+                previewContainer.appendChild(previewItem);
+
+                // Add event listeners to action buttons
+                previewItem.querySelector('.download-btn').addEventListener('click', () => {
+                    downloadImage(index);
+                });
+
+                previewItem.querySelector('.delete-btn').addEventListener('click', () => {
+                    deleteImage(index);
+                });
+
+                // Update file stats
+                updateFileStats();
+            }
+
+            function updateFileStats() {
+                fileCountElement.textContent = uploadedImages.length;
+
+                let totalSize = 0;
+                uploadedImages.forEach(image => {
+                    totalSize += image.size;
+                });
+
+                totalSizeElement.textContent = (totalSize / 1024).toFixed(2) + ' KB';
+            }
+
+            function updateUI() {
+                if (uploadedImages.length > 0) {
+                    downloadAllBtn.disabled = false;
+                    clearAllBtn.disabled = false;
+                } else {
+                    downloadAllBtn.disabled = true;
+                    clearAllBtn.disabled = true;
+                    uploadStats.style.display = 'none';
+                    uploadPlaceholder.style.display = 'block';
+                    addMoreContainer.style.display = 'none';
+                }
+            }
+
+            function convertImages() {
+                if (uploadedImages.length === 0) {
+                    alert('Please upload at least one image first.');
+                    return;
+                }
+
+                // Show conversion in progress
+                convertBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Converting...';
+                convertBtn.disabled = true;
+
+                // Simulate conversion process
+                setTimeout(() => {
+                    // Update all images as converted
+                    uploadedImages.forEach((image, index) => {
+                        image.converted = true;
+                        image.convertedDataUrl = image.dataUrl; // In reality, this would be the converted image
+
+                        // Update preview to show converted status
+                        const previewItems = document.querySelectorAll('.preview-item');
+                        if (previewItems[index]) {
+                            previewItems[index].classList.add('border', 'border-success');
+                        }
+                    });
+
+                    // Revert button state
+                    convertBtn.innerHTML = '<i class="fas fa-sync-alt me-2"></i>Convert Now';
+                    convertBtn.disabled = false;
+
+                    alert(`Conversion completed! All images have been converted to ${selectedFormat.toUpperCase()} format.`);
+                }, 1500);
+            }
+
+            function downloadImage(index) {
+                const image = uploadedImages[index];
+                const link = document.createElement('a');
+
+                link.href = image.converted ? image.convertedDataUrl : image.dataUrl;
+                link.download = `${image.name.split('.')[0]}.${selectedFormat}`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            function downloadAllAsZip() {
+                if (uploadedImages.length === 0) {
+                    alert('No images to download.');
+                    return;
+                }
+
+                // Show download in progress
+                downloadAllBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Preparing ZIP...';
+                downloadAllBtn.disabled = true;
+
+                // Simulate ZIP preparation
+                setTimeout(() => {
+                    // Revert button state
+                    downloadAllBtn.innerHTML = '<i class="fas fa-download me-2"></i>Download All as ZIP';
+                    downloadAllBtn.disabled = false;
+
+                    alert('ZIP file downloaded successfully!');
+                }, 2000);
+            }
+
+            function deleteImage(index) {
+                uploadedImages.splice(index, 1);
+
+                // Re-render previews
+                previewContainer.innerHTML = '';
+
+                fileCountElement.textContent = fileCountElement.textContent - 1
+
+                uploadedImages.forEach((image, idx) => {
+                    renderPreview(image, idx);
+                });
+
+                updateUI();
+            }
+
+            function clearAllImages() {
+                if (confirm('Are you sure you want to remove all images?')) {
+                    uploadedImages = [];
+                    previewContainer.innerHTML = '';
+                    updateUI();
+                }
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
