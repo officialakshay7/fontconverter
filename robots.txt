@@ -4,4 +4,4 @@ User-agent: *
 # Disallow: /asset/
 # Allow: /conv/
 
-Sitemap: https://egconvert.com/sitemap.xml
+Sitemap: http://fontconverter.egconvert.com/sitemap.xml
